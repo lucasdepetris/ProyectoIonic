@@ -1,0 +1,16 @@
+page-productos {
+    span{
+        display: block;
+    }
+    .input-search{
+        border: 1px solid black;
+        width: 70%;
+        float: left;
+        display: inline-block;
+    }
+    .btn-search{
+        width: 25%;
+        float: right;
+        display: inline-block;
+    }
+}
