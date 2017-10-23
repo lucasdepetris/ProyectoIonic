@@ -4,7 +4,7 @@ import { Storage } from '@ionic/storage';
 import { ZBar, ZBarOptions } from '@ionic-native/zbar';
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { HTTP } from '@ionic-native/http';
-import { sucursal } from '/home/lucas/LoginGoogleIonic/src/app/modelo/sucursal';
+import { sucursal } from '../../app/modelo/sucursal';
 import { LoadingController } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
 /**

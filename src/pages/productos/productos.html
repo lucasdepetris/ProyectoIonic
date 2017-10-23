@@ -22,7 +22,7 @@
 </button>
 </div>
 <ion-list *ngIf="productos">
-  <button ion-item *ngFor="let prod of productos" (click)="productoElegido(prod)" >
+  <button ion-item *ngFor="let prod of productos "  (click)="productoElegido(prod)" >
     <span>{{prod.nombre }}</span>
     <span>{{prod.id }}</span>
   </button>  

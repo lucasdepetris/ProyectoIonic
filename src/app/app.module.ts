@@ -12,7 +12,7 @@ import { GooglePlus } from '@ionic-native/google-plus';
 import { IonicStorageModule } from '@ionic/storage';
 import { ZBar} from '@ionic-native/zbar';
 import { AndroidPermissions } from '@ionic-native/android-permissions';
-import { ProductoServiceProvider } from '../providers/producto-service/producto-service';
+import { ProductoServiceProvider } from '../providers/producto-service/ProductoProvider';
 import { Geolocation } from '@ionic-native/geolocation';
 
 
