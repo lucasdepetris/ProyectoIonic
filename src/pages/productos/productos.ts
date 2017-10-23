@@ -49,8 +49,13 @@ export class ProductosPage {
           lng:resp.coords.longitude,
           limit:10
         }
-       alert( this.productoService.getProductos(params));
-          });
+        var re;
+        re = this.productoService.getProductos(params);
+        re.then(
+          resolved => this.productos = (resolved),
+          error => alert(error)
+        );
+        
         /*var ms = this.productoService.getPrueba();
         alert(ms);
         this.http.get('https://d735s5r2zljbo.cloudfront.net/prod/productos', params, {})

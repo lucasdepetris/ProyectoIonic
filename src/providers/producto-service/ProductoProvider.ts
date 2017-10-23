@@ -15,15 +15,25 @@ export class ProductoServiceProvider {
     console.log('Hello ProductoServiceProvider Provider');
     
   }
- async getProductos(params) {
-   await this.http.get('https://d735s5r2zljbo.cloudfront.net/prod/productos', params, {})
+getProductos(params):any {
+   
+  let promise = new Promise((resolve,reject)=> {
+    let value = true;
+    
+    this.http.get('https://d735s5r2zljbo.cloudfront.net/prod/productos', params, {})
         .then((response)=>{
           response.data = JSON.parse(response.data);
-          return  response.data.productos;
+          resolve(response.data.productos);
           })
         .catch(error => {
-            alert(error); // Error message
-          });
+            reject(error); // Error message
+          })
+   /* setTimeout(function() {
+      if(value){resolve("this value is true!");}
+      else{reject("this value is not true!");}
+    }, 3000);*/
+  })
+  return promise;
         
     /*
    await this.http.get('https://d735s5r2zljbo.cloudfront.net/prod/productos', params, {})
